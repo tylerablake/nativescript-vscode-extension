@@ -1,75 +1,45 @@
 import * as vscode from 'vscode';
 import { GENERIC_AUTOCOMPLETE_DESCRIPTION } from './constants';
 
-export const AUTOCAPITALIZATION = new vscode.CompletionItem('autocapitalizationType');
+const DEFAULT_DOCUMENTATION = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+const DEFAULT_COMMIT_CHARACTERS = ['='];
 
-AUTOCAPITALIZATION.commitCharacters = ['='];
-AUTOCAPITALIZATION.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+// Class to clean up creating new autocomplete keywords with default settings.
+export class CompletionItem extends vscode.CompletionItem{
+    constructor(label, commitCharacters, documentation){
+        super(label);
+        this.commitCharacters = commitCharacters;
+        this.documentation = documentation;
+    }
+}
 
-export const KEYBOARD_TYPE = new vscode.CompletionItem('keyboardType');
+export const AUTOCAPITALIZATION = new CompletionItem('autocapitalizationType', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-KEYBOARD_TYPE.commitCharacters = ['='];
-KEYBOARD_TYPE.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const KEYBOARD_TYPE = new CompletionItem('keyboardType', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-export const RETURN_KEY_TYPE = new vscode.CompletionItem('returnKeyType');
+export const RETURN_KEY_TYPE = new CompletionItem('returnKeyType', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-RETURN_KEY_TYPE.commitCharacters = ['='];
-RETURN_KEY_TYPE.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const TAB_BACKGROUND_COLOR = new CompletionItem('tabBackgroundColor', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-export const TAB_BACKGROUND_COLOR = new vscode.CompletionItem('tabBackgroundColor');
+export const SELECTED_TAB_TEXT_COLOR = new CompletionItem('selectedTabTextColor', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-TAB_BACKGROUND_COLOR.commitCharacters = ['='];
-TAB_BACKGROUND_COLOR.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const TAB_TEXT_COLOR = new CompletionItem('tabTextColor', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-export const SELECTED_TAB_TEXT_COLOR = new vscode.CompletionItem('selectedTabTextColor');
+export const ORIENTATION = new CompletionItem('orientation', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-SELECTED_TAB_TEXT_COLOR.commitCharacters = ['='];
-SELECTED_TAB_TEXT_COLOR.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const FONT_STYLE = new CompletionItem('fontStyle', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-export const TAB_TEXT_COLOR = new vscode.CompletionItem('tabTextColor');
+export const TEXT_ALIGNMENT = new CompletionItem('textAlignment', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-TAB_TEXT_COLOR.commitCharacters = ['='];
-TAB_TEXT_COLOR.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const TEXT_DECORATION = new CompletionItem('textDecoration', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-export const ORIENTATION = new vscode.CompletionItem('orientation');
+export const TEXT_TRANSFORM = new CompletionItem('textTransform', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-ORIENTATION.commitCharacters = ['='];
-ORIENTATION.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const VISIBILITY = new CompletionItem('visibility', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-export const FONT_STYLE = new vscode.CompletionItem('fontStyle');
+export const VERTICAL_ALIGNMENT = new CompletionItem('verticalAlignment', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
-FONT_STYLE.commitCharacters = ['='];
-FONT_STYLE.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
-
-export const TEXT_ALIGNMENT = new vscode.CompletionItem('textAlignment');
-
-TEXT_ALIGNMENT.commitCharacters = ['='];
-TEXT_ALIGNMENT.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
-
-export const TEXT_DECORATION = new vscode.CompletionItem('textDecoration');
-
-TEXT_DECORATION.commitCharacters = ['='];
-TEXT_DECORATION.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
-
-export const TEXT_TRANSFORM = new vscode.CompletionItem('textTransform');
-
-TEXT_TRANSFORM.commitCharacters = ['='];
-TEXT_TRANSFORM.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
-
-export const VISIBILITY = new vscode.CompletionItem('visibility');
-
-VISIBILITY.commitCharacters = ['='];
-VISIBILITY.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
-
-export const VERTICAL_ALIGNMENT = new vscode.CompletionItem('verticalAlignment');
-
-VERTICAL_ALIGNMENT.commitCharacters = ['='];
-VERTICAL_ALIGNMENT.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
-
-export const HORIZONTAL_ALIGNMENT = new vscode.CompletionItem('horizontalAlignment');
-
-HORIZONTAL_ALIGNMENT.commitCharacters = ['='];
-HORIZONTAL_ALIGNMENT.documentation = new vscode.MarkdownString(GENERIC_AUTOCOMPLETE_DESCRIPTION);
+export const HORIZONTAL_ALIGNMENT = new CompletionItem('horizontalAlignment', DEFAULT_COMMIT_CHARACTERS, DEFAULT_DOCUMENTATION);
 
 export const COMPLETION_PROVIDER = vscode.languages.registerCompletionItemProvider('html', {
 

@@ -143,7 +143,7 @@ export const IMAGE = vscode.languages.registerHoverProvider('html', {
         if (word.toLowerCase() === 'Image'.toLowerCase()) {
 
             const tooltip: vscode.MarkdownString = new vscode.MarkdownString()
-                .appendText(`Represents an image widget.\n`)
+                .appendText(`Represents a image widget.\n`)
                 .appendText(`\n\n{N}`)
                 .appendMarkdown(`  [Docs](https://docs.nativescript.org/angular/ui/ng-components/image)`)
                 .appendText(`   |   `)
@@ -362,7 +362,7 @@ export const LIST_PICKER = vscode.languages.registerHoverProvider('html', {
         if (word.toLowerCase() === 'ListPicker'.toLowerCase()) {
 
             const tooltip: vscode.MarkdownString = new vscode.MarkdownString()
-                .appendText(`Represents an list picker.\n`)
+                .appendText(`Represents a list picker.\n`)
                 .appendText(`\n\n{N}`)
                 .appendMarkdown(`  [Docs](https://docs.nativescript.org/angular/ui/ng-components/listpicker)`)
                 .appendText(`   |   `)
@@ -384,7 +384,7 @@ export const DATE_PICKER = vscode.languages.registerHoverProvider('html', {
         if (word.toLowerCase() === 'DatePicker'.toLowerCase()) {
 
             const tooltip: vscode.MarkdownString = new vscode.MarkdownString()
-                .appendText(`Represents an date picker.\n`)
+                .appendText(`Represents a date picker.\n`)
                 .appendText(`\n\n{N}`)
                 .appendMarkdown(`  [Docs](https://docs.nativescript.org/angular/ui/ng-components/date-picker)`)
                 .appendText(`   |   `)
@@ -406,7 +406,7 @@ export const TIME_PICKER = vscode.languages.registerHoverProvider('html', {
         if (word.toLowerCase() === 'TimePicker'.toLowerCase()) {
 
             const tooltip: vscode.MarkdownString = new vscode.MarkdownString()
-                .appendText(`Represents an time picker.\n`)
+                .appendText(`Represents a time picker.\n`)
                 .appendText(`\n\n{N}`)
                 .appendMarkdown(`  [Docs](https://docs.nativescript.org/angular/ui/ng-components/time-picker)`)
                 .appendText(`   |   `)
